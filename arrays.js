@@ -1,6 +1,8 @@
 //////////////////PROBLEM 1////////////////////
 /* Create a copy of the faveColors array called 'colorCopy' using the slice method. */
 
+const faveColors = ['red', 'green', 'black']
+const colorCopy = faveColors.slice()
 
 //CODE HERE
 
@@ -8,6 +10,10 @@
 /* Add a fourth color to the end of the 'colorCopy' array using the push method. */
 
 //CODE HERE
+
+colorCopy.push('blue')
+
+
 
 //////////////////PROBLEM 3////////////////////
 /*
@@ -18,6 +24,8 @@
 const numbers = [1, 2, 3, 4, 5]
 
 //CODE HERE
+
+const middleNums = numbers.splice(1,3)
 
 
 //////////////////PROBLEM 4////////////////////
@@ -33,3 +41,11 @@ const numbers = [1, 2, 3, 4, 5]
 const bigOrSmallArray = [1, 99, 42, 69, 102, -10, 159, 352]
 
 // CODE HERE
+const answers = []
+for(let i = 0; i < bigOrSmallArray.length-1;i++){
+  if(bigOrSmallArray[i] > 100){
+    answers.push('big')
+  }else if(bigOrSmallArray[i] <= 100){
+    answers.push('small')
+  }
+}
