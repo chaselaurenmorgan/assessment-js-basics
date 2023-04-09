@@ -51,8 +51,25 @@ const pinkPrice = .55
 
 // CODE HERE
 
+let totalAcres = 0
 
+for(let i = 0; i < fujiAcres.length -1; i++){
+    totalAcres += fujiAcres[i] + galaAcres[i] + pinkAcres[i]
+}
 
+console.log(totalAcres)
+
+/*
+Created a variable totalAcres to use within the for loop to capure the total sum of all of the acres.
+Used a for loop to iterate through each of the  acres array 
+    the for loop 
+        intialized the loop at 0 in order to start the first index of the array 
+        can choose any one of arrays because the they are the same length
+        used fujuAcres.length - 1 to iterate through the entire array 
+    within the loop body 
+        added each of the arrays indexes and added them the totalAcres variable 
+    printed out the results of the totalAcres 
+*/
 
 
 // PROBLEM 2
@@ -69,6 +86,15 @@ const pinkPrice = .55
 
 // CODE HERE
 
+let entireWeek = 7;
+let averageDailyAcres = totalAcres/entireWeek;
+console.log(averageDailyAcres)
+
+/*
+Created a variable to store the amounts of days in an entire week 
+Created a variable averageDailyAcre to store the calcualtion of totalAcres/entireWeek which should give us the average
+printed averageDailyAcres
+*/
 
 
 
@@ -108,6 +134,18 @@ let days = 0
 // CODE HERE
 
 
+while(days < acresLeft){
+    acresLeft - averageDailyAcres
+    days++
+}
+console.log(`${days}`)
+
+/*
+Used a while loop to loop through days and acres untill days was greater than acres left
+subtracted acresLeft from the averageDailyAcres 
+updater was day++ which is used to update the condition until it becomes false to end the loop
+*/
+
 
 // PROBLEM 4
 
@@ -134,13 +172,29 @@ let days = 0
 */
 
 // CODE HERE
+let fujiTons = []
+let galaTons =[]
+let pinkTons =[]
 
-// let fujiTons =
-// let galaTons =
-// let pinkTons =
+for(let i = 0; i < fujiAcres.length -1; i++){
+    fujiTons.push(fujiAcres[i] * 6.5)
+    galaTons.push(galaAcres[i] * 6.5)
+    pinkTons.push(pinkAcres[i] * 6.5)
+}
+
+console.log(fujiTons)
+console.log(galaTons)
+console.log(pinkTons)
 
 
-
+/*
+created empty arrays to push each of the total tons calucations into the the arrays
+Used the for loop to iterate through the length of the array 
+was able perform the calculation for each array within the same loop because they are all the same length 
+    in the loop body 
+    for each element(index) multiplied it by 6.5 pushed it into it's corresponding array 
+printed the arrays 
+*/
 
 
 
@@ -162,12 +216,27 @@ let days = 0
 
 // CODE HERE 
 
-// let fujiPounds =
-// let galaPounds =
-// let pinkPounds =
+let fujiPounds = 0
+let galaPounds = 0
+let pinkPounds = 0
 
 
+for(let i = 0; i < fujiAcres.length-1;i++){
+    fujiPounds += fujiTons[i] * 2000
+    galaPounds += galaTons[i] * 2000
+    pinkPounds += pinkTons[i] * 2000
+}
 
+console.log(fujiPounds)
+console.log(galaPounds)
+console.log(pinkPounds)
+
+/*
+Initialize the variety variables to 0 so that we can the calculation to them 
+Used the for loop to iterate through the length of the array 
+for each element/index that we iterate through we multiply it by 2000
+print out the variety variables that have the tons calculation 
+*/
 
 
 
@@ -189,12 +258,22 @@ let days = 0
 
 // CODE HERE
 
-// let fujiProfit =
-// let galaProfit =
-// let pinkProfit =
+let fujiProfit = fujiPounds * fujiPrice  
+let galaProfit = galaPounds * galaPrice 
+let pinkProfit = pinkPounds * pinkPrice 
 
 
+console.log(`$${fujiProfit}`)
+console.log(`$${galaProfit}`)
+console.log(`$${pinkProfit}`)
 
+/*
+Calculated the profits by multiplying  the variety pounds by the fuji prices. 
+Placed the calculation in the variaty variables 
+Since the price is already listed in cents then we shouldn't have to convert them 
+Printed out the variety variables that have the  profit per pound calculations 
+Used Temperal literals to add the dollar sign in the console
+*/
 
 
 
@@ -208,4 +287,14 @@ let days = 0
     Log `totalProfit` to the console.
 */
 
+
+
 // CODE HERE
+let totalProfit = fujiProfit + galaProfit + pinkProfit
+console.log(`$${totalProfit}`)
+
+/*
+Created the totalProfits variable to hold the caluculation of all the profits from the varieties 
+Calculated the total profit by adding all of the varieties togeter
+Printed out the total profits with a $ using temperate literal
+*/
