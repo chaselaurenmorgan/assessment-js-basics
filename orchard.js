@@ -53,7 +53,7 @@ const pinkPrice = .55
 
 let totalAcres = 0
 
-for(let i = 0; i < fujiAcres.length -1; i++){
+for(let i = 0; i < fujiAcres.length; i++){
     totalAcres += fujiAcres[i] + galaAcres[i] + pinkAcres[i]
 }
 
@@ -176,7 +176,7 @@ let fujiTons = []
 let galaTons =[]
 let pinkTons =[]
 
-for(let i = 0; i < fujiAcres.length -1; i++){
+for(let i = 0; i < fujiAcres.length; i++){
     fujiTons.push(fujiAcres[i] * 6.5)
     galaTons.push(galaAcres[i] * 6.5)
     pinkTons.push(pinkAcres[i] * 6.5)
@@ -221,7 +221,7 @@ let galaPounds = 0
 let pinkPounds = 0
 
 
-for(let i = 0; i < fujiAcres.length-1;i++){
+for(let i = 0; i < fujiAcres.length;i++){
     fujiPounds += fujiTons[i] * 2000
     galaPounds += galaTons[i] * 2000
     pinkPounds += pinkTons[i] * 2000
